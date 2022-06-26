@@ -1,0 +1,56 @@
+{{ define "header" }}<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="alternate" type="application/atom+xml" title="{{ html .Site.Other.Title }} feed" href="{{ .Rel "blog.atom" }}">
+  <title>{{ if .Title }}{{ .Title }} &mdash; {{else if .Other.Author}}{{.Other.Author}} &mdash; {{ end }}{{ .Site.Other.Title }}</title>
+  <link rel="stylesheet" type="text/css" href="{{ .Rel "static/style.css" }}">
+</head>
+<body>
+<div class="topbar">
+  <div class="left">
+    <a href="{{ $.Rel .Site.Other.Url }}">home</a>
+    <a href="https://git.alnn.xyz/">git</a>
+  </div>
+  <div class="right">
+    <a href="mailto:alan@alnn.xyz">mail</a>
+  </div>
+</div>
+<div class="main">
+{{ end }}
+
+{{ define "footer" }}
+</div>
+<div class="footer">
+  <div class="left">
+    <a href="{{ .Rel "blog.atom" }}">atom feed</a>
+  </div>
+</div>
+</body>
+</html>
+{{ end }}
+
+{{define "date"}}
+<time datetime="{{ .Format "2006-01-02T15:04:05Z07:00" }}">
+  {{ .Format "2006, January 02" }}
+</time>
+{{end}}
+
+{{ define "page" }}{{ template "header" . }}
+  {{ .Content }}
+{{ template "footer" . }}{{ end }}
+
+{{ define "post" }}
+<div class="post">
+  <div class="info">
+    {{ .Other.Author }}
+    {{ template "date" .Date }}
+  </div>
+  <div class="content">
+  {{ .Content }}
+  </div>
+  <a href="{{ $.Rel "/" }}#{{ .Date.Unix }}">
+    <span class="link"></span>
+  </a>
+</div>
+{{ end }}

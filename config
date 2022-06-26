@@ -1,0 +1,20 @@
+TEMPLATES = site.tmpl
+SOURCE = src
+OUTPUT = site
+TITLE = alnn.xyz 
+URL = https://alnn.xyz/
+
+posts/*:
+	config
+	ext .html
+	directorify	
+	template post
+	template page
+
+blog.atom: posts/*
+	inner-template
+
+*.html: posts/*
+	config
+	inner-template
+	template page

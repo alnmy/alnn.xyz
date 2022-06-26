@@ -1,0 +1,19 @@
+title: Posts 
+----
+<div class="post-list">
+{{range .Site.Pages.Children "posts/" }}
+<div class="post" id="{{ .Date.Unix }}">
+    <div class="info">
+      {{ .Other.Author }}
+      {{ template "date" .Date }}
+    </div>
+    <div class="content">
+    {{ .Raw }}
+    </div>
+    <a href="{{ $.Rel .Url }}">
+      <span class="link"></span>
+    </a>
+  </div>
+{{ end }}
+</div>
+
