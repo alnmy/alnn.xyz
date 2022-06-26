@@ -36,6 +36,8 @@
 </time>
 {{end}}
 
+{{define "filter"}}{{ exectext "./scripts/hyperlinks.sh" . }}{{ end }}
+
 {{ define "page" }}{{ template "header" . }}
   {{ .Content }}
 {{ template "footer" . }}{{ end }}
@@ -47,7 +49,7 @@
     {{ template "date" .Date }}
   </div>
   <div class="content">
-  {{ .Content }}
+  {{ template "filter" .Content }}
   </div>
   <a href="{{ $.Rel "/" }}#{{ .Date.Unix }}">
     <span class="link"></span>

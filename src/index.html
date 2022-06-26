@@ -8,7 +8,7 @@ title: Posts
       {{ template "date" .Date }}
     </div>
     <div class="content">
-    {{ .Raw }}
+    {{ template "filter" .Raw }}
     </div>
     <a href="{{ $.Rel .Url }}">
       <span class="link"></span>

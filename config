@@ -18,3 +18,4 @@ blog.atom: posts/*
 	config
 	inner-template
 	template page
+
