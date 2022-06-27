@@ -1,40 +1,39 @@
+body {
+  margin: 0;
+}
+
 .main {
   max-width: 450px;
   vertical-align: middle;
   position: relative;
   width: 100%;
-  padding-top: 1em;
-  clear: both;
+  padding-top: 3em;
+  padding-bottom: 3em;
   margin: auto;
 }
 
-.topbar {
-  display: inline;
-  vertical-align: middle;
-  position: relative;
-  width: 100%;
-  padding-top: 1em;
+.bar {
+  background-color: #282828;
+  color: #ffffff;
+  position: fixed;
+  overflow: hidden;
+  padding: 0.5em;
+  padding: 0;
+  left: 0;
+  right: 0;
+}
+
+.bar a {
+  text-decoration: none;
+  color: white;
+}
+
+.navbar {
+  top: 0;
 }
 
 .footer {
-  display: inline;
-  vertical-align: middle;
-  position: relative;
-  width: 100%;
   bottom: 0;
-  padding: 1em;
-}
-
-.topbar .left,
-.topbar .right {
-  padding: 0 0.4em 0.4em 0.4em;
-  margin: 0;
-}
-
-.footer .left,
-.footer .right {
-  padding: 0.4em 0.4em 0 0.4em;
-  margin: 0;
 }
 
 .left {
@@ -53,7 +52,7 @@
   padding: 0.5em;
   border-bottom: 0.125em solid white;
   background-color: #282828;
-  color: #ffffff; 
+  color: white; 
 }
 
 .post:last-child {
