@@ -54,6 +54,10 @@ body {
   color: white; 
 }
 
+.post a {
+  color: skyblue;
+}
+
 .post:last-child {
   border-bottom: 0;
 }
