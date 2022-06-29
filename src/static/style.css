@@ -16,8 +16,7 @@ body {
   color: #ffffff;
   position: fixed;
   overflow: hidden;
-  padding: 0.5em;
-  padding: 0;
+  padding: 0.25em;
   left: 0;
   right: 0;
 }
