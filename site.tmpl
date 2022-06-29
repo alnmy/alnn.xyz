@@ -7,7 +7,7 @@
   <link rel="stylesheet" type="text/css" href="{{ .Rel "static/style.css" }}">
 </head>
 <body>
-<div class="topbar">
+<div class="navbar bar">
   <div class="left">
     <a href="{{ $.Rel .Site.Other.Url }}">home</a>
     <a href="https://git.alnn.xyz/">git</a>
@@ -21,7 +21,7 @@
 
 {{ define "footer" }}
 </div>
-<div class="footer">
+<div class="footer bar">
   <div class="left">
     <a href="{{ .Rel "blog.atom" }}">atom feed</a>
   </div>
