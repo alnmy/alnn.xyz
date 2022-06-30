@@ -5,6 +5,7 @@
   <link rel="alternate" type="application/atom+xml" title="{{ html .Site.Other.Title }} feed" href="{{ .Rel "blog.atom" }}">
   <title>{{ if .Title }}{{ .Title }} &mdash; {{else if .Other.Author}}{{.Other.Author}} &mdash; {{ end }}{{ .Site.Other.Title }}</title>
   <link rel="stylesheet" type="text/css" href="{{ .Rel "static/style.css" }}">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
 <div class="navbar bar">
