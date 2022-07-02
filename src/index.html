@@ -2,7 +2,7 @@ title: Posts
 ----
 <div class="post-list">
 {{range .Site.Pages.Children "posts/" }}
-{{ template "post" . }}
+{{ template "post-index" . }}
 {{ end }}
 </div>
 
