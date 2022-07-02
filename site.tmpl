@@ -43,17 +43,32 @@
   {{ .Content }}
 {{ template "footer" . }}{{ end }}
 
+{{ define "post-index" }}
+<div class="post">
+  <a href="{{ .Rel .Url }}" class="link"></a>
+  <div class="post-body">
+    <div class="info">
+      {{ .Other.Author }}
+      {{ template "date" .Date }}
+    </div>
+    <div class="content">
+    {{ template "filter" .Raw }}
+    </div>
+  </div>
+</div>
+{{ end }}
+ 
 {{ define "post" }}
 <div class="post">
-  <div class="info">
-    {{ .Other.Author }}
-    {{ template "date" .Date }}
+  <a href="{{ $.Rel "/" }}#{{ .Date.Unix }}" class="link"></a>
+  <div class="post-body">
+    <div class="info">
+      {{ .Other.Author }}
+      {{ template "date" .Date }}
+    </div>
+    <div class="content">
+    {{ template "filter" .Raw }}
+    </div>
   </div>
-  <div class="content">
-  {{ template "filter" .Content }}
-  </div>
-  <a href="{{ $.Rel "/" }}#{{ .Date.Unix }}">
-    <span class="link"></span>
-  </a>
 </div>
 {{ end }}
