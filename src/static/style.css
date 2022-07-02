@@ -1,6 +1,7 @@
 body {
   margin: 0;
   font-family: sans-serif;
+  background-color: #32302f;
 }
 
 .main {
@@ -29,9 +30,11 @@ body {
 
 .navbar {
   top: 0;
+  border-bottom: 1px solid #1d2021;
 }
 
 .footer {
+  border-top: 1px solid #1d2021;
   bottom: 0;
 }
 
@@ -49,7 +52,8 @@ body {
   overflow: auto;
   word-wrap: break-word;
   padding: 0.5em;
-  border-bottom: 0.125em solid white;
+  border: 1px solid #1d2021;
+  border-bottom: 1px solid rgba(255,255,255,.25);
   background-color: #282828;
   color: white; 
 }
@@ -58,8 +62,12 @@ body {
   color: skyblue;
 }
 
+.post:first-child {
+  border-top: 1px solid #1d2021;
+}
+
 .post:last-child {
-  border-bottom: 0;
+  border-bottom: 1px solid #1d2021;
 }
 
 .info time {
@@ -72,5 +80,5 @@ body {
   height: 100%;
   top: 0;
   left: 0;
-  z-index: 1;
+  z-index: 2;
 }
