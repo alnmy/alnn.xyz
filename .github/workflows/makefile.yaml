@@ -21,20 +21,7 @@ jobs:
       run: |
         export PATH="$PATH:$(go env GOPATH)/bin"
         make
-
-    - name: Upload artifact
-      uses: actions/upload-artifact@v3
+    - uses: actions/upload-artifact@v3
       with: 
         name: website
         path: site/
-
-    - name: Deploy to alnn.xyz
-      uses: easingthemes/ssh-deploy@main 
-      env:
-        SSH_PRIVATE_KEY: ${{ secrets.SSH_DEPLOY_KEY }}
-        ARGS: "-rltgoDzvO"
-        SOURCE: "site/"
-        REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
-        REMOTE_USER: ${{ secrets.REMOTE_USER }}
-        TARGET: ${{ secrets.TARGET }}
-
