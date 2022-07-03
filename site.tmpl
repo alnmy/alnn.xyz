@@ -44,7 +44,7 @@
 {{ template "footer" . }}{{ end }}
 
 {{ define "post-index" }}
-<div class="post">
+<div class="post" id="{{ .Date.Unix }}">
   <a href="{{ .Rel .Url }}" class="link"></a>
   <div class="post-body">
     <div class="info">
