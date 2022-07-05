@@ -48,7 +48,7 @@
   <a href="{{ .Rel .Url }}" class="link"></a>
   <div class="post-body">
     <div class="info">
-      {{ .Other.Author }}
+      <b>{{ .Other.Author }}</b>
       {{ template "date" .Date }}
     </div>
     <div class="content">
@@ -63,8 +63,8 @@
   <a href="{{ $.Rel "/" }}#{{ .Date.Unix }}" class="link"></a>
   <div class="post-body">
     <div class="info">
-      {{ .Other.Author }}
-      {{ template "date" .Date }}
+    <b>{{ .Other.Author }}</b>
+    {{ template "date" .Date }}
     </div>
     <div class="content">
     {{ template "filter" .Raw }}
