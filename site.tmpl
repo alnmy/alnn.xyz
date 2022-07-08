@@ -40,7 +40,7 @@
 </time>
 {{end}}
 
-{{define "filter"}}{{ exectext "./scripts/hyperlinks.sh" . }}{{ end }}
+{{define "filter"}}{{ exectext "sh" "./scripts/hyperlinks.sh" . }}{{ end }}
 
 {{ define "page" }}{{ template "header" . }}
   {{ .Content }}
