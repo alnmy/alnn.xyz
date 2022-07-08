@@ -47,7 +47,6 @@ body {
 }
 
 .post {
-  cursor: pointer;
   position: relative;
   overflow: auto;
   word-wrap: break-word;
@@ -70,9 +69,10 @@ body {
   border-bottom: 1px solid #1d2021;
 }
 
-.info time {
-  float: right;
-} 
+.info {
+  display: flex;
+  justify-content: space-between;
+}
 
 .link {
   position: absolute;
