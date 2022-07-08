@@ -48,11 +48,10 @@
 
 {{ define "post-index" }}
 <div class="post" id="{{ .Date.Unix }}">
-  <a href="{{ .Rel .Url }}" class="link"></a>
   <div class="post-body">
     <div class="info">
       <b>{{ .Other.Author }}</b>
-      {{ template "date" .Date }}
+      <a href="{{ .Rel .Url }}">{{ template "date" .Date }}</a>
     </div>
     <div class="content">
     {{ template "filter" .Raw }}
@@ -63,11 +62,10 @@
  
 {{ define "post" }}
 <div class="post">
-  <a href="{{ $.Rel "/" }}#{{ .Date.Unix }}" class="link"></a>
   <div class="post-body">
     <div class="info">
     <b>{{ .Other.Author }}</b>
-    {{ template "date" .Date }}
+    <a href="{{ .Rel "/" }}#{{ .Date.Unix }}">{{ template "date" .Date }}</a>
     </div>
     <div class="content">
     {{ template "filter" .Raw }}
