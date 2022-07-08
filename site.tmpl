@@ -6,7 +6,6 @@
   <title>{{ if .Title }}{{ .Title }} &mdash; {{else if .Other.Author}}{{.Other.Author}} &mdash; {{ end }}{{ .Site.Other.Title }}</title>
   <meta property="og:title" content="{{ if .Title }}{{ .Title }}{{ else if .Site.Other.Title }}{{ .Site.Other.Title }}{{ end }}" />
   <meta property="og:url" content="{{ .Site.Other.Url }}" />
-  <meta property="og:description" content="{{ .Raw }}" />
   <link rel="stylesheet" type="text/css" href="{{ .Rel "static/style.css" }}">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
