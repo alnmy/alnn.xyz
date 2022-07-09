@@ -7,6 +7,11 @@
   <meta property="og:title" content="{{ if .Title }}{{ .Title }}{{ else if .Site.Other.Title }}{{ .Site.Other.Title }}{{ end }}" />
   <meta property="og:url" content="{{ .Site.Other.Url }}" />
   <meta property="og:site_name" content="{{ .Site.Other.Title }}" />
+  <meta property="og:description" content="{{ if .Other.Description -}}
+    {{ .Other.Description }}
+  {{- else -}}
+        {{ with cut "<div class=\"content\".*?>" "</div>" .Content }}{{ excerpt . 30 | trim | strip_html }}{{ end }}
+  {{- end }}">
   <link rel="stylesheet" type="text/css" href="{{ .Rel "static/style.css" }}">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
