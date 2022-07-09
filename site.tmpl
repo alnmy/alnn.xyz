@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <link rel="alternate" type="application/atom+xml" title="{{ html .Site.Other.Title }} feed" href="{{ .Rel "blog.atom" }}">
   <title>{{ if .Title }}{{ .Title }} &mdash; {{else if .Other.Author}}{{.Other.Author}} &mdash; {{ end }}{{ .Site.Other.Title }}</title>
-  <meta property="og:title" content="{{ if .Title }}{{ .Title }}{{ else if .Site.Other.Title }}{{ .Site.Other.Title }}{{ end }}" />
+  <meta property="og:title" content="{{ if .Other.Author }}{{ .Other.Author }}{{ else if .Title }}{{ .Title }}{{ else if .Site.Other.Title }}{{ .Site.Other.Title }}{{ end }}" />
   <meta property="og:url" content="{{ .Site.Other.Url }}" />
   <meta property="og:site_name" content="{{ .Site.Other.Title }}" />
   <meta property="og:description" content="{{ if .Other.Description -}}
