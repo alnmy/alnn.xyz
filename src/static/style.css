@@ -58,8 +58,13 @@ body {
   color: white; 
 }
 
-.post a {
+.content a {
   color: skyblue;
+}
+
+.info a {
+  color: rgba(255,255,255,.8);
+  text-decoration: none;
 }
 
 .post:first-child {
