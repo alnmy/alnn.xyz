@@ -83,7 +83,7 @@
     {{ template "filter" .Raw }}
     </div>
     {{ if .Other.Image }}
-    <div class="images">
+    <div class="grid">
     {{ range split "," .Other.Image }}
       <a href="{{ . }}"><img src="{{ . }}"></a>
     {{ end }}
