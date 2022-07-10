@@ -61,6 +61,13 @@
     <div class="content">
     {{ template "filter" .Raw }}
     </div>
+    {{ if .Other.Image }}
+    <div class="grid">
+    {{ range split "," .Other.Image }}
+      <a href="{{ . }}"><img src="{{ . }}"></a>
+    {{ end }}
+    </div>
+    {{ end }}
   </div>
 </div>
 {{ end }}
@@ -75,6 +82,13 @@
     <div class="content">
     {{ template "filter" .Raw }}
     </div>
+    {{ if .Other.Image }}
+    <div class="images">
+    {{ range split "," .Other.Image }}
+      <a href="{{ . }}"><img src="{{ . }}"></a>
+    {{ end }}
+    </div>
+    {{ end }}
   </div>
 </div>
 {{ end }}

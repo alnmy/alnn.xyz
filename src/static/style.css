@@ -75,6 +75,21 @@ body {
   border-bottom: 1px solid #1d2021;
 }
 
+.grid { 
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  background-color: #1d2021;
+  padding: 0.5em;
+}
+
+.grid a img {
+  height: 100%;
+  width: 100%;
+}
+
 .info {
   display: flex;
   justify-content: space-between;
