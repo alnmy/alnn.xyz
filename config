@@ -7,7 +7,8 @@ URL = https://alnn.xyz/
 posts/*:
 	config
 	ext .html
-	directorify	
+	directorify
+	relativize
 	template post
 	template page
 
@@ -15,7 +16,7 @@ blog.atom: posts/*
 	inner-template
 
 *.html: posts/*
+	relativize
 	config
 	inner-template
 	template page
-
