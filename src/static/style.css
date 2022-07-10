@@ -13,6 +13,14 @@ body {
   margin: auto;
 }
 
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
 .bar {
   background-color: #282828;
   color: #ffffff;
@@ -38,14 +46,6 @@ body {
   bottom: 0;
 }
 
-.left {
-  float: left;
-}
-
-.right {
-  float: right;
-}
-
 .post {
   position: relative;
   overflow: auto;
@@ -58,6 +58,14 @@ body {
   color: white; 
 }
 
+.post:first-child {
+  border-top: 1px solid #1d2021;
+}
+
+.post:last-child {
+  border-bottom: 1px solid #1d2021;
+}
+
 .content a {
   color: skyblue;
 }
@@ -67,12 +75,10 @@ body {
   text-decoration: none;
 }
 
-.post:first-child {
-  border-top: 1px solid #1d2021;
-}
 
-.post:last-child {
-  border-bottom: 1px solid #1d2021;
+.info {
+  display: flex;
+  justify-content: space-between;
 }
 
 .grid { 
@@ -88,9 +94,4 @@ body {
 .grid a img {
   height: 100%;
   width: 100%;
-}
-
-.info {
-  display: flex;
-  justify-content: space-between;
 }
