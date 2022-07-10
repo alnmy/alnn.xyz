@@ -16,6 +16,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
+<div class="main">
+{{ end }}
+
+{{ define "footer" }}
+</div>
 <div class="navbar bar">
   <div class="left">
     <a href="{{ .Site.Other.Url }}">home</a>
@@ -24,11 +29,6 @@
   <div class="right">
     <a href="mailto:alan@alnn.xyz">mail</a>
   </div>
-</div>
-<div class="main">
-{{ end }}
-
-{{ define "footer" }}
 </div>
 <div class="footer bar">
   <div class="left">
