@@ -64,7 +64,7 @@
     {{ if .Other.Image }}
     <div class="grid">
     {{ range split "," .Other.Image }}
-      <a href="{{ . }}"><img src="{{ . }}"></a>
+      <a href="{{ . }}"><img loading="lazy" src="{{ . }}"></a>
     {{ end }}
     </div>
     {{ end }}
