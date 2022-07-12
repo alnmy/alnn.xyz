@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <link rel="alternate" type="application/atom+xml" title="{{ html .Site.Other.Title }} feed" href="{{ .Rel "blog.atom" }}">
+  <link rel="alternate" type="application/rss+xml" title="{{ html .Site.Other.Title }} feed" href="{{ .Rel "rss.xml" }}">
   <title>{{ if .Title }}{{ .Title }} &mdash; {{else if .Other.Author}}{{.Other.Author}} &mdash; {{ end }}{{ .Site.Other.Title }}</title>
   <meta property="og:title" content="{{ if .Other.Author }}{{ .Other.Author }}{{ else if .Title }}{{ .Title }}{{ else if .Site.Other.Title }}{{ .Site.Other.Title }}{{ end }}" />
   <meta property="og:url" content="{{ .Site.Other.Url }}" />
@@ -32,7 +32,7 @@
 </div>
 <div class="footer bar">
   <div class="left">
-    <a href="{{ .Rel "blog.atom" }}">atom feed</a>
+    <a href="{{ .Rel "rss.xml" }}">rss feed</a>
   </div>
 </div>
 </body>

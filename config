@@ -2,6 +2,7 @@ TEMPLATES = site.tmpl
 SOURCE = src
 OUTPUT = site
 TITLE = alnn.xyz 
+DESCRIPTION = unoriginal microblog on the internet
 URL = https://alnn.xyz/
 
 posts/*:
@@ -13,6 +14,9 @@ posts/*:
 	template page
 
 blog.atom: posts/*
+	inner-template
+
+rss.xml: posts/*
 	inner-template
 
 *.html: posts/*
