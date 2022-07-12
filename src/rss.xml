@@ -24,8 +24,8 @@
 				{{ end }}
 				{{ end }}
 			</description>
-			<guid>{{ .Site.Other.Url }}{{ .Url }}"</guid>
-			<link>{{ .Site.Other.Url }}{{ .Url }}"</link>
+			<guid>{{ .Site.Other.Url }}{{ .Url }}</guid>
+			<link>{{ .Site.Other.Url }}{{ .Url }}</link>
 			<pubDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 MST" }}</pubDate>
 		</item>
 		{{ end }} 
