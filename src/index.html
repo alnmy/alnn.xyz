@@ -2,7 +2,29 @@ title: Posts
 description: Index of posts from alnn.xyz
 ----
 <div class="post-list">
-{{range .Site.Pages.Children "posts/" }}
+  <div class="post" id="ad-0">
+    <div class="post-body">
+      <div class="info"><b>alan</b></div>
+      <div class="content">
+        If you're seeing this, you are most likely not blocking advertisements.
+        Please install one of the following or more:
+        <ul>
+          <li>Chrome/Edge: <a href="https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm?hl=en">uBlock Origin</a></li>
+          <li>Firefox: <a href="https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/">uBlock Origin</a></li>
+          <li>iOS: <a href="https://apps.apple.com/app/orion-browser-by-kagi/id1484498200">Kagi Browser</a></li>
+          <li>Android:<ul> 
+            <li><a href="https://play.google.com/store/apps/details?id=org.mozilla.firefox&amp;hl=en_US&amp;gl=US">Firefox</a> and <a href="https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/">uBlock Origin</a></li>
+            <li><a href="https://adaway.org/">AdAway</a></li>
+          </ul></li>
+          <li>Network wide (doesn't block advertisements from the site, such as this):<ul>
+            <li><a href="https://github.com/AdguardTeam/AdguardHome">AdGuard Home</a></li>
+            <li><a href="https://pi-hole.net">PiHole</a></li>
+          </ul></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+{{ range .Site.Pages.Children "posts/" }}
 {{ template "post-index" . }}
 {{ end }}
 </div>
